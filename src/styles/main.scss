@@ -125,6 +125,7 @@ body {
         letter-spacing: 0.5px;
     }
 }
+
 .block-book {
     display: flex;
     justify-content: flex-start;
@@ -152,5 +153,24 @@ body {
     &__img {
         margin-top: 48px;
         margin-right: 45px;
+    }
+}
+
+.block-counter {
+    padding-top: 160px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        span {
+            display: block;
+            font-family: 'Roboto Slab', serif;
+            font-size: 80px;
+            font-weight: 100;
+            color: $accent-color;
+            margin-bottom: 15px;
+        }
     }
 }
