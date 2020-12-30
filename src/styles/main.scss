@@ -9,6 +9,8 @@
 $main-color: #696980;
 $light-color: #fff;
 $accent-color: #65e496;
+$bg-light-color: #f5f6fa;
+$bg-dark-color: #44444f;
 
 body {
     /* font-family: 'Open Sans', sans-serif; */
@@ -29,6 +31,9 @@ body {
 }
 .page {
     padding-top: 160px;
+    &_grey {
+        background-color: $bg-light-color;
+    }
 }
 .header {
     display: flex;
