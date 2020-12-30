@@ -15,8 +15,24 @@ $bg-dark-color: #44444f;
 body {
     /* font-family: 'Open Sans', sans-serif; */
     font-family: 'Roboto Slab', serif;
+    font-size: 15px;
     color: $main-color;
 }
+
+h1, h2, h3, h4, p {
+    padding: 0;
+    margin: 0;
+    line-height: 44px;
+}
+h3 {
+    font-size: 24px;
+    letter-spacing: 1.2px;
+}
+p {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 24px;
+}
+
 .wrap {
     max-width: 1170px;
     margin: 0 auto;
@@ -33,6 +49,17 @@ body {
     padding-top: 160px;
     &_grey {
         background-color: $bg-light-color;
+    }
+    &__title {
+        font-size: 48px;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+    &__subtitle {
+        font-size: 18px;
+        color: $accent-color;
+        text-align: center;
+        letter-spacing: 0.9px;
     }
 }
 .header {
@@ -83,7 +110,7 @@ body {
         letter-spacing: 0.9px;
         margin-top: 0px;
         margin-bottom: 30px;
-        &-top {
+        &_top {
             margin-top: 17px;
             margin-bottom: 20px;
             margin-left: 0;
@@ -176,6 +203,50 @@ body {
             font-weight: 100;
             color: $accent-color;
             margin-bottom: 15px;
+        }
+    }
+}
+
+.block-about {
+    display: flex;
+    justify-content: space-between;
+    h3 {
+        margin-bottom: 10px;
+    }
+    &-text {
+        flex-basis: 40%;
+    }
+    &-table {
+        flex-basis: 50%;
+        &__list {
+            margin: 15px 0 0 0;
+            padding: 0;
+            counter-reset: list;
+            column-count: 2;
+            font-family: 'Open Sans', sans-serif;
+            &>li {
+                padding-left: 36px;
+                position: relative;
+                counter-increment: list;
+                list-style-type: none;
+                margin-bottom: 8px;
+                letter-spacing: 0.7px;
+                &::before {
+                    content: counter(list) ". ";
+                }
+                &::after {
+                    content: "+";
+                    position: absolute;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 15px;
+                    line-height: 22px;
+                    left: 0px;
+                    top: 1px;
+                    color: $light-color;
+                    background-color:$accent-color;
+                    padding: 0px 7px;
+                }
+            }
         }
     }
 }
